@@ -16,7 +16,7 @@ for (let i = 0; i < lastdatemonth; i++) {
 for (let i = 0; data_array.length < 42; i++) {
     data_array.push('');
 }
-for (let i = 0; i < data_array.length-7; i=i+7) {
+for (let i = 0; i < data_array.length; i=i+7) {
 data.push(data_array.slice(i,i+7));
 }
 console.log(data_array,data);
