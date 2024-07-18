@@ -50,11 +50,11 @@ setmonth(val);
 setcurrentdate(new Date(year,val,1));
 }
 const handlebtn=(e)=>{
-if (e.target.value=='year-') {
-  setyear(year-1);
+if (e.target.value=='-1') {
+  setyear(year=>year-1);
   const val=year-1;
 setcurrentdate(new Date(val,month,1));
-}else if (e.target.value=='year+') {
+}else if (e.target.value=='1') {
   setyear(year+1);
   const val=year+1;
 setcurrentdate(new Date(val,month,1));
@@ -96,16 +96,16 @@ setcurrentdate(new Date(year,val,1));
         <option value='November'>November</option>
         <option value='December'>December</option>
       </select>
-      <span id="year"> <input id="year-text-box" onChange={handleyear} type="number" value={year} />
+      <span id="year"><input id="year-text-box" onChange={handleyear} type="number" value={year} />
       </span>
       <hr/>
      <RenderCalendar week={week} currentdate={currentdate} />
       <hr/>
       <div id="btns">
-        <button id="previous-year" onClick={handlebtn} value='year-'>{'<<'}</button>
+        <button id="previous-year" onClick={handlebtn} value='-1'>{'<<'}</button>
         <button id="previous-month" onClick={handlebtn} value={'month-'}>{'<'}</button>
         <button id="next-month" onClick={handlebtn} value={'month+'}>{'>'}</button>
-        <button id="next-year" onClick={handlebtn} value={'year+'}>{'>>'}</button>
+        <button id="next-year" onClick={handlebtn} value={'1'}>{'>>'}</button>
       </div>
     </div>
   )
