@@ -27,7 +27,7 @@ console.log(data_array,data);
        <table>
         <thead>
           <tr>
-            {props.week.map((item,i)=><th key={'week'+i}>{item}</th>)}
+            {props.week.map((item,i)=><td key={'week'+i}>{item}</td>)}
           </tr>
         </thead>
         <tbody>

@@ -45,8 +45,6 @@ switch (val) {
   break;
   case 'December':val=11;
   break;
-  default:val=0;
-    break;
 }
 setmonth(val);
 setcurrentdate(new Date(year,val,1));
@@ -98,7 +96,7 @@ setcurrentdate(new Date(year,val,1));
         <option value='November'>November</option>
         <option value='December'>December</option>
       </select>
-      <span> <input id="year" onChange={handleyear} type="number" value={year} />
+      <span id="year"> <input id="year-text-box" onChange={handleyear} type="number" value={year} />
       </span>
       <hr/>
      <RenderCalendar week={week} currentdate={currentdate} />
