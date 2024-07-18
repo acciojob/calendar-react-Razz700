@@ -102,10 +102,10 @@ setcurrentdate(new Date(year,val,1));
      <RenderCalendar week={week} currentdate={currentdate} />
       <hr/>
       <div id="btns">
-        <button onClick={handlebtn} value='year-'>{'<<'}</button>
-        <button onClick={handlebtn} value={'month-'}>{'<'}</button>
-        <button onClick={handlebtn} value={'month+'}>{'>'}</button>
-        <button onClick={handlebtn} value={'year+'}>{'>>'}</button>
+        <button id="previous-year" onClick={handlebtn} value='year-'>{'<<'}</button>
+        <button id="previous-month" onClick={handlebtn} value={'month-'}>{'<'}</button>
+        <button id="next-month" onClick={handlebtn} value={'month+'}>{'>'}</button>
+        <button id="next-year" onClick={handlebtn} value={'year+'}>{'>>'}</button>
       </div>
     </div>
   )
