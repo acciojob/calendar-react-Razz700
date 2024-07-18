@@ -100,10 +100,11 @@ const handleclick=()=>{
         <option value='November'>November</option>
         <option value='December'>December</option>
       </select>
-        {click && <span id="year" onDoubleClick={handleclick}>{year}</span>}
-     <span>{!click && <input id="year-text-box" onChange={handleyear} type="number" value={year} />}
-     </span>  
-     <hr/>
+      <span>{click && <span id="year" onDoubleClick={handleclick}>{year}</span>}
+      </span> 
+      <span>{!click && <input id="year-text-box" onChange={handleyear} type="number" value={year} />}
+      </span>  
+      <hr/>
      <RenderCalendar week={week} currentdate={currentdate} />
       <hr/>
       <div id="btns">
