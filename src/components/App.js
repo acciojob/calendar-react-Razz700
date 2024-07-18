@@ -79,6 +79,10 @@ month==11?val=0:val=month+1;
 setcurrentdate(new Date(year,val,1));
 }
 }
+const [click,setclick]=useState(true);
+const handleclick=()=>{
+  setclick(false)
+}
   return (
     <div id="main">
       <h1 id="heading">Calendar</h1>
@@ -96,10 +100,10 @@ setcurrentdate(new Date(year,val,1));
         <option value='November'>November</option>
         <option value='December'>December</option>
       </select>
-      <span id="year">
-        <span id="year-text-box">{year}</span>
-        {/* <input id="year-text-box" onChange={handleyear} type="number" value={year} /> */}
-      </span>
+     
+        {click && <span id="year-text-box" onDoubleClick={handleclick}>{year}</span>}
+        {!click && <input id="year" onChange={handleyear} type="number" value={year} />}
+    
       <hr/>
      <RenderCalendar week={week} currentdate={currentdate} />
       <hr/>
