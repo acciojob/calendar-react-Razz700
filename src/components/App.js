@@ -96,8 +96,10 @@ setcurrentdate(new Date(year,val,1));
         <option value='November'>November</option>
         <option value='December'>December</option>
       </select>
-      <span id="year"><input onChange={handleyear} type="number" value={year} /></span>
-      <span id="year-text-box">{year}</span>
+      <span id="year">
+        <span id="year-text-box">{year}</span>
+        {/* <input id="year-text-box" onChange={handleyear} type="number" value={year} /> */}
+      </span>
       <hr/>
      <RenderCalendar week={week} currentdate={currentdate} />
       <hr/>
